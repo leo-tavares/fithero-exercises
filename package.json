@@ -1,0 +1,35 @@
+{
+  "name": "dziku-exercises",
+  "version": "0.0.1",
+  "description": "Custom list of exercises based on db.everkinetic.",
+  "scripts": {
+    "build": "node index.js",
+    "lint": "eslint src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ferrannp/dziku-exercises.git"
+  },
+  "keywords": [
+    "dziku",
+    "exercises",
+    "everkinetic",
+    "node",
+    "json"
+  ],
+  "author": "Ferran Negre Pizarro <fnp.developer@gmail.com> (https://github.com/ferrannp)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ferrannp/dziku-exercises/issues"
+  },
+  "homepage": "https://github.com/ferrannp/dziku-exercises#readme",
+  "eslintConfig": {
+    "extends": "callstack-io"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-callstack-io": "^1.1.2"
+  }
+}
