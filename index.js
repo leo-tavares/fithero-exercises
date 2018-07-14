@@ -53,7 +53,13 @@ fs.writeFileSync(
  */
 
 const exercises = everkineticJson
-  .sort((a, b) => (a.name < b.name ? -1 : 1))
+  .sort(
+    (a, b) =>
+      exerciseTitles[`exercise__${a.name}`] <
+      exerciseTitles[`exercise__${b.name}`]
+        ? -1
+        : 1
+  )
   .map(e => ({
     id: e.name,
     primary: e.primary.map(m => m.split(' ').join('-')),
