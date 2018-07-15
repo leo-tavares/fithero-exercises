@@ -17,6 +17,43 @@ if (hasDuplicates(exerciseList)) {
 }
 
 /**
+ * New muscles map
+ */
+
+const musclesMap = {
+  abdominals: 'abs',
+  back: 'back',
+  'biceps-brachii': 'biceps',
+  core: 'core',
+  deltoid: 'shoulders',
+  'deltoideus-(clavicula)': 'shoulders',
+  'erector-spinae': 'hamstrings',
+  forearm: 'forearms',
+  gastrocnemius: 'calves',
+  'glutaeus-maximus': 'glutes',
+  'hip-abductors': 'abductors',
+  'ischiocrural-muscles': 'hamstrings',
+  'latissimus-dorsi': 'lats',
+  obliques: 'abs',
+  'pectoralis-major': 'chest',
+  quadriceps: 'quadriceps',
+  soleus: 'calves',
+  trapezius: 'traps',
+  'triceps-brachii': 'triceps',
+  'upper-back': 'back',
+};
+
+const sortObject = unordered => {
+  const ordered = {};
+  Object.keys(unordered)
+    .sort()
+    .forEach(key => {
+      ordered[key] = unordered[key];
+    });
+  return ordered;
+};
+
+/**
  * Parse all muscles (primary and secondary) into muscles.json
  */
 
@@ -26,10 +63,13 @@ const muscleList = everkineticJson.reduce(
 );
 
 const muscleSet = [...new Set(muscleList)];
-const muscles = {};
-muscleSet.sort().forEach(m => {
-  muscles[`muscle__${m.split(' ').join('-')}`] = '';
+let muscles = {};
+
+muscleSet.forEach(m => {
+  const muscle = musclesMap[m.split(' ').join('-')];
+  muscles[`muscle__${muscle}`] = '';
 });
+muscles = sortObject(muscles);
 
 fs.writeFileSync(`${base}/muscles.json`, JSON.stringify(muscles, null, 2));
 
@@ -62,8 +102,12 @@ const exercises = everkineticJson
   )
   .map(e => ({
     id: e.name,
-    primary: e.primary.map(m => m.split(' ').join('-')),
-    secondary: e.secondary.map(m => m.split(' ').join('-')),
+    primary: [
+      ...new Set(e.primary.map(m => musclesMap[m.split(' ').join('-')])),
+    ],
+    secondary: [
+      ...new Set(e.secondary.map(m => musclesMap[m.split(' ').join('-')])),
+    ],
   }));
 
 fs.writeFileSync(`${base}/exercises.json`, JSON.stringify(exercises, null, 2));
