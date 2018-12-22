@@ -1,0 +1,76 @@
+[
+  {
+    "name": "custom__one-arm-dumbbell-row",
+    "title": "One Arm Dumbbell Row",
+    "primary": [
+      "back"
+    ],
+    "secondary": [
+      "biceps-brachii",
+      "shoulders"
+    ]
+  },
+  {
+    "name": "custom__seated-bent-over-rear-delt-raise",
+    "title": "Seated Bent Over Rear Delt Raise",
+    "primary": [
+      "shoulders"
+    ],
+    "secondary": [
+      "back"
+    ]
+  },
+  {
+    "name": "custom__cable-crunch",
+    "title": "Cable Crunch",
+    "primary": [
+      "abdominals"
+    ],
+    "secondary": []
+  },
+  {
+    "name": "custom__standing-barbell-military-press",
+    "title": "Standing Barbell Military Press",
+    "primary": [
+      "shoulders"
+    ],
+    "secondary": [
+      "triceps"
+    ]
+  },
+  {
+    "name": "custom__wide-grip-pull-up",
+    "title": "Wide Grip Pull Up",
+    "primary": [
+      "latissimus-dorsi"
+    ],
+    "secondary": []
+  },
+  {
+    "name": "custom__dumbbell-split-squat",
+    "title": "Dumbbell Split Squat",
+    "primary": [
+      "quadriceps"
+    ],
+    "secondary": [
+      "erector-spinae",
+      "glutaeus-maximus"
+    ]
+  },
+  {
+    "name": "custom__hanging-leg-raise",
+    "title": "Hanging Leg Raise",
+    "primary": [
+      "abdominals"
+    ],
+    "secondary": []
+  },
+  {
+    "name": "custom__hanging-knee-raise",
+    "title": "Hanging Knee Raise",
+    "primary": [
+      "abdominals"
+    ],
+    "secondary": []
+  }
+]
