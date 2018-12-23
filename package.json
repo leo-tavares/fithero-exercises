@@ -4,7 +4,7 @@
   "description": "Custom list of exercises based on db.everkinetic.",
   "scripts": {
     "build": "node index.js",
-    "lint": "eslint src",
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "main": "index.js",
