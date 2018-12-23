@@ -14,8 +14,9 @@ if (!fs.existsSync(base)) {
  * Ensure ids will be unique
  */
 const hasDuplicates = arr => new Set(arr).size !== arr.length;
-const exerciseList = dataJson.map(e => e.name);
-if (hasDuplicates(exerciseList)) {
+const exerciseName = dataJson.map(e => e.name);
+const exerciseTitle = dataJson.map(e => e.title);
+if (hasDuplicates(exerciseName) || hasDuplicates(exerciseTitle)) {
   throw Error('Found duplicated exercises!');
 }
 
