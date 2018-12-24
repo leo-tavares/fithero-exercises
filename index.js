@@ -136,12 +136,14 @@ fs.writeFileSync(`${base}/exercises.json`, JSON.stringify(exercises, null, 2));
 
 fs.writeFileSync(
   `${base}/index.js`,
-  `import _exercises from './exercises.json';
-import _exercisesTitles from './exerciseTitles.json';
-import _muscles from './muscles.json';
+  `const exercises = require('./exercises.json');
+const exercisesTitles = require('./exerciseTitles.json');
+const muscles = require('./muscles.json');
 
-export const exercises = _exercises;
-export const exercisesTitles = _exercisesTitles;
-export const muscles = _muscles;
+module.exports = {
+  exercises,
+  exercisesTitles,
+  muscles,
+};
 `
 );
