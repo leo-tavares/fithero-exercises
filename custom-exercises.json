@@ -1,6 +1,6 @@
 [
   {
-    "name": "custom__one-arm-dumbbell-row",
+    "name": "custom--one-arm-dumbbell-row",
     "title": "One Arm Dumbbell Row",
     "primary": [
       "back"
@@ -11,7 +11,7 @@
     ]
   },
   {
-    "name": "custom__seated-bent-over-rear-delt-raise",
+    "name": "custom--seated-bent-over-rear-delt-raise",
     "title": "Seated Bent Over Rear Delt Raise",
     "primary": [
       "shoulders"
@@ -21,7 +21,7 @@
     ]
   },
   {
-    "name": "custom__cable-crunch",
+    "name": "custom--cable-crunch",
     "title": "Cable Crunch",
     "primary": [
       "abdominals"
@@ -29,7 +29,7 @@
     "secondary": []
   },
   {
-    "name": "custom__standing-barbell-military-press",
+    "name": "custom--standing-barbell-military-press",
     "title": "Standing Barbell Military Press",
     "primary": [
       "shoulders"
@@ -39,7 +39,7 @@
     ]
   },
   {
-    "name": "custom__wide-grip-pull-up",
+    "name": "custom--wide-grip-pull-up",
     "title": "Wide Grip Pull Up",
     "primary": [
       "latissimus-dorsi"
@@ -47,7 +47,7 @@
     "secondary": []
   },
   {
-    "name": "custom__dumbbell-split-squat",
+    "name": "custom--dumbbell-split-squat",
     "title": "Dumbbell Split Squat",
     "primary": [
       "quadriceps"
@@ -58,7 +58,7 @@
     ]
   },
   {
-    "name": "custom__hanging-leg-raise",
+    "name": "custom--hanging-leg-raise",
     "title": "Hanging Leg Raise",
     "primary": [
       "abdominals"
@@ -66,7 +66,7 @@
     "secondary": []
   },
   {
-    "name": "custom__hanging-knee-raise",
+    "name": "custom--hanging-knee-raise",
     "title": "Hanging Knee Raise",
     "primary": [
       "abdominals"
