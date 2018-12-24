@@ -50,19 +50,29 @@ const musclesMap = {
   'upper-back': 'back',
 };
 
-const sortObject = unordered => {
-  const ordered = {};
-  Object.keys(unordered)
-    .sort()
-    .forEach(key => {
-      ordered[key] = unordered[key];
-    });
-  return ordered;
-};
-
 /**
  * Parse all muscles (primary and secondary) into muscles.json
  */
+
+const muscleNames = {
+  muscle__abductors: 'Abductors',
+  muscle__abs: 'Abs',
+  muscle__arms: 'Arms', // Custom main category
+  muscle__back: 'Back',
+  muscle__biceps: 'Biceps',
+  muscle__calves: 'Calves',
+  muscle__chest: 'Chest',
+  muscle__core: 'Core',
+  muscle__forearms: 'Forearms',
+  muscle__glutes: 'Glutes',
+  muscle__hamstrings: 'Hamstrings',
+  muscle__lats: 'Lats',
+  muscle__legs: 'Legs', // Custom main category
+  muscle__quadriceps: 'Quadriceps',
+  muscle__shoulders: 'Shoulders',
+  muscle__traps: 'Traps',
+  muscle__triceps: 'Triceps',
+};
 
 const muscleList = dataJson.reduce(
   (acc, e) => acc.concat(e.primary.concat(e.secondary)),
@@ -70,15 +80,16 @@ const muscleList = dataJson.reduce(
 );
 
 const muscleSet = [...new Set(muscleList)];
-let muscles = {};
 
 muscleSet.forEach(m => {
   const muscle = musclesMap[m.split(' ').join('-')];
-  muscles[`muscle__${muscle}`] = '';
+  const key = `muscle__${muscle}`;
+  if (!muscleNames[key]) {
+    throw Error('Cannot find muscle name');
+  }
 });
-muscles = sortObject(muscles);
 
-fs.writeFileSync(`${base}/muscles.json`, JSON.stringify(muscles, null, 2));
+fs.writeFileSync(`${base}/muscles.json`, JSON.stringify(muscleNames, null, 2));
 
 /**
  * Parse id (we use everkinetic name) with titles (for english language file)
