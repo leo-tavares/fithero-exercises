@@ -1,5 +1,5 @@
 {
-  "name": "dziku-exercises",
+  "name": "@ferrannp/dziku-exercises",
   "version": "0.0.1",
   "description": "Custom list of exercises based on db.everkinetic.",
   "scripts": {
@@ -7,7 +7,10 @@
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ferrannp/dziku-exercises.git"
