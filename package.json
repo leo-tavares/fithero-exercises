@@ -1,6 +1,6 @@
 {
   "name": "dziku-exercises",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Custom list of exercises based on db.everkinetic.",
   "scripts": {
     "build": "node index.js",
