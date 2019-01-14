@@ -47,13 +47,13 @@
     "secondary": []
   },
   {
-    "name": "custom--dumbbell-split-squat",
-    "title": "Dumbbell Split Squat",
+    "name": "custom--bulgarian-split-squat",
+    "title": "Bulgarian Split Squat",
     "primary": [
       "quadriceps"
     ],
     "secondary": [
-      "erector-spinae",
+      "soleus",
       "glutaeus-maximus"
     ]
   },
