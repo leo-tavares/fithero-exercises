@@ -120,6 +120,7 @@ const exercises = dataJson
   )
   .map(e => ({
     id: e.name,
+    notes: e.steps ? e.steps.join(' ') : '',
     primary: [
       ...new Set(e.primary.map(m => musclesMap[m.split(' ').join('-')])),
     ],
