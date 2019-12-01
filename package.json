@@ -1,6 +1,6 @@
 {
-  "name": "dziku-exercises",
-  "version": "0.2.0",
+  "name": "fithero-exercises",
+  "version": "1.0.0",
   "description": "Custom list of exercises based on db.everkinetic.",
   "scripts": {
     "build": "node index.js",
@@ -14,27 +14,27 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ferrannp/dziku-exercises.git"
+    "url": "https://github.com/ferrannp/fithero-exercises.git"
   },
   "keywords": [
-    "dziku",
+    "fithero",
     "exercises",
     "everkinetic",
     "node",
     "json"
   ],
   "author": "Ferran Negre Pizarro <fnp.developer@gmail.com> (https://github.com/ferrannp)",
-  "license": "MIT",
+  "license": "CC-BY-SA-4.0",
   "bugs": {
-    "url": "https://github.com/ferrannp/dziku-exercises/issues"
+    "url": "https://github.com/ferrannp/fithero-exercises/issues"
   },
-  "homepage": "https://github.com/ferrannp/dziku-exercises#readme",
+  "homepage": "https://github.com/ferrannp/fithero-exercises#readme",
   "eslintConfig": {
-    "extends": "callstack-io"
+    "extends": "@callstack/eslint-config/node"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-callstack-io": "^1.1.2",
+    "@callstack/eslint-config": "^8.0.0",
+    "eslint": "^6.7.2",
     "release-it": "^9.3.0"
   },
   "dependencies": {},

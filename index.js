@@ -97,9 +97,11 @@ fs.writeFileSync(`${base}/muscles.json`, JSON.stringify(muscleNames, null, 2));
 
 // Parse name as id and title
 const exerciseTitles = {};
-dataJson.sort((a, b) => (a.name < b.name ? -1 : 1)).forEach(e => {
-  exerciseTitles[`exercise__${e.name}`] = e.title;
-});
+dataJson
+  .sort((a, b) => (a.name < b.name ? -1 : 1))
+  .forEach(e => {
+    exerciseTitles[`exercise__${e.name}`] = e.title;
+  });
 
 fs.writeFileSync(
   `${base}/exerciseTitles.json`,
@@ -111,12 +113,11 @@ fs.writeFileSync(
  */
 
 const exercises = dataJson
-  .sort(
-    (a, b) =>
-      exerciseTitles[`exercise__${a.name}`] <
-      exerciseTitles[`exercise__${b.name}`]
-        ? -1
-        : 1
+  .sort((a, b) =>
+    exerciseTitles[`exercise__${a.name}`] <
+    exerciseTitles[`exercise__${b.name}`]
+      ? -1
+      : 1
   )
   .map(e => ({
     id: e.name,
