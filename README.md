@@ -7,5 +7,6 @@ Used in the [FitHero](https://github.com/ferrannp/fithero) mobile app.
 
 ## Planned translations
 
-- Spanish (names)
-- Polish (names)
+- Spanish
+- Catalan
+- Polish (names?)
